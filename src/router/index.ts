@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-export const router = createRouter({
+const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {
@@ -8,12 +8,14 @@ export const router = createRouter({
       redirect: 'login'
     },
     {
-      path: 'home',
+      path: '/home',
       component: () => import('../views/home/home.vue')
     },
     {
-      path: 'login',
+      path: '/login',
       component: () => import('../views/login/login.vue')
     }
   ]
 })
+
+export default router
